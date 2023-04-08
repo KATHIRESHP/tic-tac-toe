@@ -64,7 +64,7 @@ function Gamepage() {
 
 
     return (
-        <div className='container d-flex flex-column vh-100 vw-100 justify-content-center align-items-center'>
+        <div className='container d-flex flex-column vh-80 vw-100 justify-content-center align-items-center'>
             {winner == "" &&
                 <div className='display-6 m-5'>Player {player}'s turn</div>
             }
