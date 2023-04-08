@@ -48,8 +48,6 @@ function Gamepage() {
     }
 
     useEffect(() => {
-        // console.log(player1);
-        // console.log(player2);
         for (let i = 0; i < winningCombinations.length; i++) {
             const [x, y, z] = winningCombinations[i];
             if (player1.includes(x) && player1.includes(y) && player1.includes(z)) {
@@ -70,9 +68,7 @@ function Gamepage() {
             }
             <></>
             {winner != "" &&
-                <>
                     <div className='display-6 fw-bolder'> Player {winner} won the Match</div>
-                </>
             }
             <></>
             {winner == "" &&
