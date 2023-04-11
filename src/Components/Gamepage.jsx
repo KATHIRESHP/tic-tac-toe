@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BackGroundAudio from './BackGroundAudio';
+import bgsound from '../resrc/backgroundmusic.mp3'
 
 
 function Gamepage() {
@@ -51,6 +53,7 @@ function Gamepage() {
     }
 
     useEffect(() => {
+
         for (let i = 0; i < winningCombinations.length; i++) {
             const [x, y, z] = winningCombinations[i];
             if (player1.includes(x) && player1.includes(y) && player1.includes(z)) {
@@ -112,6 +115,7 @@ function Gamepage() {
                     <div className='display-6 fw-bolder'> Player {winner} won the Match</div>
             }
             <button className='btn btn-danger mt-5' onClick={() => resetHandler()}>Reset</button>
+            <BackGroundAudio src={bgsound}/>
         </div>
     )
 }
